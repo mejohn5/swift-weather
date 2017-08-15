@@ -64,7 +64,7 @@ class HomeViewController: UIViewController ,CLLocationManagerDelegate,MKMapViewD
     }
     func showError(){
         let alert = UIAlertController(title: "Error", message: "Not Location Found", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Working!!", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
@@ -143,6 +143,13 @@ class HomeViewController: UIViewController ,CLLocationManagerDelegate,MKMapViewD
         })
 
         
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            CoreDataStack.shared.context.delete(cityList[indexPath.row])
+            self.cityList.remove(at: indexPath.row)
+            self.tableView.reloadData()
+        }
     }
     public func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation){
         updatemapLocation(lat: userLocation.coordinate.latitude, lng: userLocation.coordinate.longitude)
