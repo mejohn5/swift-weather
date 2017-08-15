@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		2C442C531F413F9800FF3892 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C442C521F413F9800FF3892 /* AppDelegate.swift */; };
-		2C442C551F413F9800FF3892 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C442C541F413F9800FF3892 /* FirstViewController.swift */; };
+		2C442C551F413F9800FF3892 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C442C541F413F9800FF3892 /* HomeViewController.swift */; };
 		2C442C571F413F9800FF3892 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C442C561F413F9800FF3892 /* SecondViewController.swift */; };
 		2C442C5A1F413F9800FF3892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C442C581F413F9800FF3892 /* Main.storyboard */; };
 		2C442C5C1F413F9800FF3892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C442C5B1F413F9800FF3892 /* Assets.xcassets */; };
 		2C442C5F1F413F9800FF3892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C442C5D1F413F9800FF3892 /* LaunchScreen.storyboard */; };
+		2C442C681F41492100FF3892 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C442C671F41492100FF3892 /* MapKit.framework */; };
+		2C442C6B1F425A0E00FF3892 /* City.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C442C691F425A0E00FF3892 /* City.xcdatamodeld */; };
+		2C442C721F425C1B00FF3892 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C442C711F425C1B00FF3892 /* CoreDataStack.swift */; };
+		2C442C741F425EC200FF3892 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C442C731F425EC200FF3892 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C442C4F1F413F9800FF3892 /* Weath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C442C521F413F9800FF3892 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C442C541F413F9800FF3892 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		2C442C541F413F9800FF3892 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2C442C561F413F9800FF3892 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2C442C591F413F9800FF3892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C442C5B1F413F9800FF3892 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C442C5E1F413F9800FF3892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C442C601F413F9800FF3892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C442C671F41492100FF3892 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2C442C6A1F425A0E00FF3892 /* City.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = City.xcdatamodel; sourceTree = "<group>"; };
+		2C442C711F425C1B00FF3892 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		2C442C731F425EC200FF3892 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C442C681F41492100FF3892 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,7 @@
 			children = (
 				2C442C511F413F9800FF3892 /* Weath */,
 				2C442C501F413F9800FF3892 /* Products */,
+				2C442C661F41492100FF3892 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +66,50 @@
 		2C442C511F413F9800FF3892 /* Weath */ = {
 			isa = PBXGroup;
 			children = (
+				2C442C701F425BF000FF3892 /* common */,
+				2C442C6D1F425AFD00FF3892 /* model */,
+				2C442C6C1F425AD300FF3892 /* views */,
 				2C442C521F413F9800FF3892 /* AppDelegate.swift */,
-				2C442C541F413F9800FF3892 /* FirstViewController.swift */,
-				2C442C561F413F9800FF3892 /* SecondViewController.swift */,
 				2C442C581F413F9800FF3892 /* Main.storyboard */,
 				2C442C5B1F413F9800FF3892 /* Assets.xcassets */,
 				2C442C5D1F413F9800FF3892 /* LaunchScreen.storyboard */,
 				2C442C601F413F9800FF3892 /* Info.plist */,
 			);
 			path = Weath;
+			sourceTree = "<group>";
+		};
+		2C442C661F41492100FF3892 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C442C671F41492100FF3892 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C442C6C1F425AD300FF3892 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				2C442C541F413F9800FF3892 /* HomeViewController.swift */,
+				2C442C561F413F9800FF3892 /* SecondViewController.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		2C442C6D1F425AFD00FF3892 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2C442C691F425A0E00FF3892 /* City.xcdatamodeld */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		2C442C701F425BF000FF3892 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				2C442C711F425C1B00FF3892 /* CoreDataStack.swift */,
+				2C442C731F425EC200FF3892 /* Constants.swift */,
+			);
+			name = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +185,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C442C571F413F9800FF3892 /* SecondViewController.swift in Sources */,
+				2C442C721F425C1B00FF3892 /* CoreDataStack.swift in Sources */,
 				2C442C531F413F9800FF3892 /* AppDelegate.swift in Sources */,
-				2C442C551F413F9800FF3892 /* FirstViewController.swift in Sources */,
+				2C442C741F425EC200FF3892 /* Constants.swift in Sources */,
+				2C442C6B1F425A0E00FF3892 /* City.xcdatamodeld in Sources */,
+				2C442C551F413F9800FF3892 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +353,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C442C691F425A0E00FF3892 /* City.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C442C6A1F425A0E00FF3892 /* City.xcdatamodel */,
+			);
+			currentVersion = 2C442C6A1F425A0E00FF3892 /* City.xcdatamodel */;
+			path = City.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2C442C471F413F9800FF3892 /* Project object */;
 }
