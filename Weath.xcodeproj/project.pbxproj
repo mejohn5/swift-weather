@@ -17,6 +17,9 @@
 		2C442C6B1F425A0E00FF3892 /* City.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C442C691F425A0E00FF3892 /* City.xcdatamodeld */; };
 		2C442C721F425C1B00FF3892 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C442C711F425C1B00FF3892 /* CoreDataStack.swift */; };
 		2C442C741F425EC200FF3892 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C442C731F425EC200FF3892 /* Constants.swift */; };
+		2C442C761F42820900FF3892 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C442C751F42820900FF3892 /* CityViewController.swift */; };
+		2C442C781F4283C100FF3892 /* NetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C442C771F4283C100FF3892 /* NetworkUtil.swift */; };
+		2C442C7A1F429CFC00FF3892 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C442C791F429CFC00FF3892 /* Forecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
