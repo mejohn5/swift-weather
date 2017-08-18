@@ -8,11 +8,14 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class HelpViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        webView.loadHTMLString(
+            Constants.WEBVIEW_HTML, baseURL: nil)
     }
 
     override func didReceiveMemoryWarning() {
