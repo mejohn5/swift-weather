@@ -38,7 +38,7 @@ class HomeViewController: UIViewController ,CLLocationManagerDelegate,MKMapViewD
             NSFetchRequest<CityMO>(entityName: Constants.entityName)
         do {
             cityList = try     CoreDataStack.shared.context.fetch(fetchRequest)
-        } catch let _ as NSError {
+        } catch _ as NSError {
         }
         tableView.reloadData()
 
@@ -165,6 +165,15 @@ class HomeViewController: UIViewController ,CLLocationManagerDelegate,MKMapViewD
         tableView.beginUpdates()
         tableView.insertRows(at: [IndexPath(row: cityList.count-1, section: 0)], with: .automatic)
         tableView.endUpdates()
+    }
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        self.performSegue(withIdentifier: "citySegue", sender: cityList[indexPath.row])
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "citySegue"){
+            let vc = segue.destination as! CityViewController
+            vc.cityMO = sender as! CityMO? 
+        }
     }
 }
 
