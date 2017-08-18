@@ -140,7 +140,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="forecastCell" id="ZLx-NY-OoU" customClass="ForecastCell" customModule="Weath" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="6" width="127" height="247"/>
+                                        <rect key="frame" x="0.0" y="-51" width="127" height="247"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="127" height="247"/>
@@ -264,7 +264,7 @@
             </objects>
             <point key="canvasLocation" x="2784.8000000000002" y="-404.34782608695656"/>
         </scene>
-        <!--Second-->
+        <!--Help-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Weath" customModuleProvider="target" sceneMemberID="viewController">
@@ -287,7 +287,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Help" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="webView" destination="6WY-aF-xDd" id="ipE-Vw-DWu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -312,11 +315,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--First-->
+        <!--Home-->
         <scene sceneID="VVQ-Op-Vuv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ghZ-zL-jWf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="crY-Ul-pJt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
